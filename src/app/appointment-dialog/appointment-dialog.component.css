@@ -1,0 +1,19 @@
+.button-row {
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+button {
+  margin: 0;
+  padding: 8px 16px;
+}
+.button-row button.mat-raised-button {
+  background-color: #1adaf3 ; /* Custom color for primary button */
+  color: rgb(11, 10, 10); /* Text color */
+}
+
+.button-row button.mat-raised-button[color="warn"] {
+  background-color: #e81c4f ; /* Custom color for warn button */
+  color: rgb(7, 7, 7); /* Text color */
+}

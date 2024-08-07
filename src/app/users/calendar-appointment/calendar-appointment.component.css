@@ -1,0 +1,36 @@
+.calendar {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+  }
+  
+  .appointments {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom:10px ;
+  }
+  
+  .appointment {
+    width: 90%;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mat-form-field {
+    width: 100%;
+  }
+  
+  .mat-datepicker-toggle {
+    margin-left: 10px;
+  }
+  
+  .mat-form-field-appearance-outline .mat-form-field-outline {
+    border-radius: 0; /* Square outline */
+  }

@@ -1,0 +1,42 @@
+<div class="main">
+  <h1 style="margin-left: 5%;">Calendar</h1>
+  <div style="display: flex;align-items: center;justify-content: center;">
+   <table>
+      <thead>
+        <tr>
+          <th>Sun</th>
+          <th>Mon</th>
+          <th>Tue</th>
+          <th>Wed</th>
+          <th>Thu</th>
+          <th>Fri</th>
+          <th>Sat</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let week of calendar">
+          <td *ngFor="let date of week" [ngClass]="{'today': isToday(date)}">
+            {{ date ? date.getDate() : '' }}
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div> 
+  <div style="display: flex;align-items: center;justify-content: center;margin-bottom: 5%;">
+      
+    <mat-divider></mat-divider> 
+      <section> 
+        <div class="example-label">
+          <div class="example-button-row">
+            <button (click)="navigateToAppointments()" mat-raised-button style="background-color: #7e7eba; color: rgb(11, 10, 10);">
+              <mat-icon>add</mat-icon> CREATE
+            </button>
+          </div>
+        </div>
+      </section>
+  </div>
+</div>
+
+
+
+
