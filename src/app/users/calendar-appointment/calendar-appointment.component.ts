@@ -48,7 +48,7 @@ export class CalendarAppointmentComponent implements OnInit {
   openDialog(): void {
     const dialogRef = this.dialog.open(AppointmentDialogComponent, {
       width: '250px',
-      data: { date: new Date() } // Optionally pass the current date to the dialog
+      data: { date: this.selectedDate|| new Date() } // Optionally pass the current date to the dialog
     });
 
     dialogRef.afterClosed().subscribe(result => {

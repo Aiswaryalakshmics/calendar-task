@@ -1,6 +1,6 @@
 import { Component ,Inject} from '@angular/core';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { FormBuilder, FormGroup,Validator, Validators } from '@angular/forms';
 
 
 @Component({
@@ -8,7 +8,6 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   templateUrl: './appointment-dialog.component.html',
   styleUrls: ['./appointment-dialog.component.css'],
   
-
 })
 export class AppointmentDialogComponent {
   appointmentForm: FormGroup;
@@ -19,15 +18,16 @@ export class AppointmentDialogComponent {
     @Inject(MAT_DIALOG_DATA) public data: any
   ) {
     this.appointmentForm = this.fb.group({
-      title: [''],
-      date: [data.date || null] // Set the initial date if provided
+      title: ['',Validators.required],
+      date: [data.date, Validators.required] // Set the initial date if provided
     });
   }
 
   onSubmit(): void {
-    const appointment = this.appointmentForm.value;
-    appointment.id = new Date().getTime();
-    this.dialogRef.close(this.appointmentForm.value);
+    if(this.appointmentForm.value) {
+      this.dialogRef.close(this.appointmentForm.value);
+    }
+   
 
   }
 
