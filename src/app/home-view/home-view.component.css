@@ -13,7 +13,7 @@
 /* Media query for devices with a max width of 768px (mobile) */
 @media (max-width: 768px) {
   .main {
-    outline: 1px solid #000; /* Thinner outline for mobile */
+   
     padding: 8px;
     margin: 8px;
   }
@@ -22,7 +22,7 @@
 /* Media query for devices with a max width of 480px (small mobile) */
 @media (max-width: 480px) {
   .main{
-    outline: 1px dashed #000; /* Dashed outline for very small mobile */
+    
     padding: 5px;
     margin: 5px;
   }
